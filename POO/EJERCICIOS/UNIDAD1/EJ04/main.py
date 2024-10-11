@@ -1,8 +1,6 @@
-# Diseñar una clase Python llamada “Producto” con los atributos nombre, categoría,
-# precio y cantidad. Diseña en esta clase el método __str__ de forma que retorne
-# todos los atributos en un dato de tipo cadena (str).
-# Crear dos productos pertenecientes a esa clase y mostrar todos los datos de aquel
-# producto que tenga mayor precio.
+# Modificar la clase “Producto” del ejercicio anterior añadiendo un método que
+# actualice la cantidad de un producto sumándole un valor pasado como parámetro.
+# Mostrar los datos de un producto antes y después de ser modificada su cantidad.
 from Producto import Producto
 
 p1 = Producto("Patatas","Aperitivos",2,10)

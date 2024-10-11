@@ -5,6 +5,12 @@
 # producto que tenga mayor precio.
 from Producto import Producto
 
-p1 = Producto("Patatas","Aperitivos",2,10)
 
-print(p1)
+p1 = Producto("Patatas","Aperitivos",2,10)
+p2 = Producto("Aceitunas","Aperitivos",3,10)
+
+
+if p1.precio > p2.precio:
+    print(p1)
+else:
+    print(p2)

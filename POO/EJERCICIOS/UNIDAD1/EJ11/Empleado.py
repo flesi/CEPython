@@ -13,3 +13,9 @@ class Empleado:
 
     def __eq__(self, otro):
         return self._salario == otro._salario
+    
+    def __str__(self):
+        return (f"Identificador: {self.identificador} | "
+                f"Nombre: {self.nombre} | "
+                f"Departamento: {self.departemento} | "
+                f"Salario: {self._salario} | ")

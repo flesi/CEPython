@@ -1,3 +1,4 @@
+# Visualizar en pantalla aquellos productos que pertenezcan a la categoría ‘verdura’.
 from Producto import Producto
 
 productos = [Producto("tomate", "fruta", 2.3, 100),
@@ -9,4 +10,4 @@ Producto("pera", "fruta", 2.7, 75)]
 
 for producto in productos:
     if producto.categoria == "verdura":
-        print(producto.nombre)
+        print(producto)
