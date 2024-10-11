@@ -6,4 +6,4 @@ class Vehiculo:
         self.precio = precio
         
     def nombre_completo(self):
-        print(f"{self.marca}-{self.modelo}")
+        return f"{self.marca}-{self.modelo}"

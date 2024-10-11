@@ -4,3 +4,6 @@ class Vehiculo:
         self.modelo = modelo
         self.anio   = anio
         self.precio = precio
+
+    def __str__(self):
+        return f"Marca:{self.marca} - Modelo:{self.modelo} - Año:{self.anio}  - Precio: {self.precio}"

@@ -6,12 +6,10 @@ class Producto:
         self.cantidad = cantidad
 
     def __str__(self):
-        print(f"""
-                Nombre: {self.nombre} 
-                Categoria: {self.categoria} 
-                Precio:  {self.precio}
-                Cantidad: {self.cantidad}
-            """)
+        return (f"Nombre: {self.nombre} | " 
+                f"Categoria: {self.categoria} | " 
+                f"Precio:  {self.precio} | "
+                f"Cantidad: {self.cantidad}")
         
     def actualizar_cantidad(self, cantidad):
         self.cantidad = self.cantidad + cantidad
