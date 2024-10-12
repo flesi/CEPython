@@ -1,13 +1,15 @@
+from Productos import Producto
 class Carrito:
 
+
     def __init__(self):
-        pass
+        self.productos = []
 
     def mostrar_productos(self):
         pass
 
     def agregar_productos(self):
-        pass
+        self.productos.append()
 
     def eliminar_producto(self):
         pass
