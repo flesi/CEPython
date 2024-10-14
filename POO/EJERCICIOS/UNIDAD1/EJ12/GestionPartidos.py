@@ -3,42 +3,43 @@ from datetime import date
 class GestionPartidos:
     partidos = [
                 Partido("Zafra","Medina",3,1,"RioBodion",date.fromisoformat("20240519")),
-                Partido("Medina","Zafra",3,1,"RioBodion",date.fromisoformat("20240519")),
-                Partido("Zafra","Medina",3,1,"RioBodion",date.fromisoformat("20240519")),
-                Partido("Zafra","Medina",3,1,"RioBodion",date.fromisoformat("20190519"))
+                Partido("Medina","Zafra",2,4,"RioBodion",date.fromisoformat("20240519")),
+                Partido("Zafra","Medina",2,4,"RioBodion",date.fromisoformat("20240519")),
+                Partido("Zafra","Medina",2,4,"RioBodion",date.fromisoformat("20190519"))
                 ]
     
-    @staticmethod
-    def equipo_local(local):
-        for partido in GestionPartidos.partidos:
-            if local == partido.local:
+    @classmethod
+    def equipo_local(cls,local):
+        for partido in cls.partidos:
+            if partido.local == local:
                 print(partido)
 
-    @staticmethod
-    def ganados_equipo(equipo):
-        for partido in GestionPartidos.partidos:
-            if equipo == partido.local & partido.goles_locales > partido.goles_visitante:
-                return partido.local
-            elif equipo == partido.visitante & partido.goles_visitante > partido.goles_locales:
-                return partido.visitante
+    @classmethod
+    def ganados_equipo(cls,equipo):
+        # GestionPartidos.partidos[0].local = "MADRID"
+        for partido in cls.partidos:
+            if equipo == partido.local and partido.goles_locales > partido.goles_visitante:
+                return partido
+            elif equipo == partido.visitante and partido.goles_visitante > partido.goles_locales:
+                return partido
 
 
-    @staticmethod
-    def partidos_anio(anio):
-        for partido in GestionPartidos.partidos:
+    @classmethod
+    def partidos_anio(cls,anio):
+        for partido in cls.partidos:
             if anio == partido.fecha.year:
                 print(partido)
 
-    @staticmethod
-    def partidos_fecha(fecha):
-        for partido in GestionPartidos.partidos:
+    @classmethod
+    def partidos_fecha(cls,fecha):
+        for partido in cls.partidos:
             if fecha == partido.fecha:
                 print(partido)
 
-    @staticmethod
-    def agregar_partido(partido):
-        GestionPartidos.partidos.append(partido)
+    @classmethod
+    def agregar_partido(cls,partido):
+        cls.partidos.append(partido)
 
-    @staticmethod
-    def num_partidos():
-        return len(GestionPartidos.partidos)
+    @classmethod
+    def num_partidos(cls):
+        return len(cls.partidos)
